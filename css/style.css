@@ -1,3 +1,4 @@
+/*display*/
 * {
 	margin:0;
 	padding:0;
@@ -12,8 +13,28 @@
 	text-align: center;
 	background: #00F;
 	display: inline-block;
-	box-sizing: border-box;
+	box-sizing: border-box; /*включает border и padding в размеры блока*/
 }
 #wrapper .block {
-	border: 5px solid #FF0;
+	border: 5px #FF0 solid;
+}
+
+/*box-model*/
+.outer{
+	width: 400px;
+	height: 400px;
+	background: #0F0;
+	margin: 100px;/*top right bottom left*/
+	margin: 50px 100px;/*top-bottom left-right*/
+	margin: 50px 100px 0;/*top left-right bottom*/
+	margin: 10px 20px 30px 40px;
+	border: 5px #000 dotted;
+	border-radius: 50%;/*px/%*/
+	box-sizing: border-box;
+}
+.outer .inner {
+	width: 100px;
+	height: 100px;
+	background: #0FF;
+	margin: 0 auto;
 }
